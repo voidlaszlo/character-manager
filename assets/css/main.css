@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', cursive;
+  background-color: #0a0711;
+}
+
+header {
+  background-color: #201c47;
+  padding: 0.5em 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 1500px) {
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+header h1 {
+  margin: 0;
+  color: #7affa6;
+}
+
+@media screen and (max-width: 1500px) {
+  header h1 {
+    display: none;
+  }
+}
+
+header nav ul {
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a, header nav ul li a:visited, header nav ul li a:link {
+  padding: 0.25em 1em;
+  margin-right: 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4em;
+  border: 1px solid #7affa6;
+}
+
+header nav ul li a:hover, header nav ul li a:visited:hover, header nav ul li a:link:hover {
+  color: #7affa6;
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+}
+
+main {
+  padding: 2em 15vw;
+}
+
+main h1 {
+  font-size: 3em;
+  color: #7affa6;
+  text-align: center;
+}
+
+main p {
+  font-size: 1.4em;
+  color: white;
+}
+
+div.manage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+div.manage div.manage-left {
+  padding: 1em;
+}
+
+div.manage div.manage-left label {
+  color: #7affa6;
+}
+
+div.manage div.manage-left input {
+  width: 100%;
+  border: none;
+  padding: 1em;
+  background-color: black;
+  color: white;
+}
+
+div.manage div.manage-right {
+  padding: 1em;
+}
+
+div.manage div.manage-right button {
+  width: 100%;
+  height: 100%;
+  background-color: #201c47;
+  border: 2px solid #7affa6;
+  color: white;
+  font-size: 4em;
+}
+
+div.manage div.manage-right button:hover {
+  color: #7affa6;
+  -webkit-box-shadow: inset 3px 6px 15px rgba(0, 0, 0, 0.9);
+          box-shadow: inset 3px 6px 15px rgba(0, 0, 0, 0.9);
+  -webkit-transition: 100ms ease-out;
+  transition: 100ms ease-out;
+}
+
+div#display {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+div#display div.character {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.7);
+  border: 1px solid #201c47;
+  padding: 0 1em;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  height: 500px;
+}
+
+div#display div.character h2 {
+  color: #7affa6;
+  font-size: 2em;
+}
+
+div#display div.character p {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+div#display div.character div.character-abilites {
+  justify-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div#display div.character div.character-abilites h2 {
+  width: 70%;
+}
+
+div#display div.character div.character-abilites p {
+  padding: 0.25em 1em;
+  margin: 5px;
+  border: 1px solid #7affa6;
+}
+/*# sourceMappingURL=main.css.map */
