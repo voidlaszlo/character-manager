@@ -8,61 +8,37 @@ body {
 header {
   background-color: #201c47;
   padding: 0.5em 15vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
   header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0;
   }
 }
 
 header h1 {
   margin: 0;
   color: #7affa6;
+  padding: 1em;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
   header h1 {
-    display: none;
+    text-align: center;
   }
-}
-
-header nav ul {
-  padding: 0;
-}
-
-header nav ul li {
-  display: inline-block;
-}
-
-header nav ul li a, header nav ul li a:visited, header nav ul li a:link {
-  padding: 0.25em 1em;
-  margin-right: 1em;
-  text-decoration: none;
-  color: white;
-  font-size: 1.4em;
-  border: 1px solid #7affa6;
-}
-
-header nav ul li a:hover, header nav ul li a:visited:hover, header nav ul li a:link:hover {
-  color: #7affa6;
-  -webkit-transition: 200ms ease-out;
-  transition: 200ms ease-out;
 }
 
 main {
   padding: 2em 15vw;
+}
+
+@media screen and (max-width: 1300px) {
+  main {
+    padding: 0;
+  }
 }
 
 main h1 {
@@ -83,6 +59,13 @@ div.manage {
       grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width: 1300px) {
+  div.manage {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 div.manage div.manage-left {
   padding: 1em;
 }
@@ -99,6 +82,12 @@ div.manage div.manage-left input {
   color: white;
 }
 
+@media screen and (max-width: 1300px) {
+  div.manage div.manage-left input {
+    padding: 1em 0;
+  }
+}
+
 div.manage div.manage-right {
   padding: 1em;
 }
@@ -110,6 +99,13 @@ div.manage div.manage-right button {
   border: 2px solid #7affa6;
   color: white;
   font-size: 4em;
+  outline: none;
+}
+
+@media screen and (max-width: 1300px) {
+  div.manage div.manage-right button {
+    font-size: 2em;
+  }
 }
 
 div.manage div.manage-right button:hover {
@@ -128,6 +124,13 @@ div#display {
   grid-gap: 1em;
 }
 
+@media screen and (max-width: 1300px) {
+  div#display {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 div#display div.character {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,11 +142,23 @@ div#display div.character {
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.7);
           box-shadow: 0 3px 7px rgba(0, 0, 0, 0.7);
   border: 1px solid #201c47;
-  padding: 0 1em;
+  padding: 1em 3em;
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
   height: 500px;
+}
+
+@media screen and (max-width: 1300px) {
+  div#display div.character {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    height: unset;
+    margin: 1em;
+    padding: 10px;
+    font-size: 0.8em;
+  }
 }
 
 div#display div.character h2 {

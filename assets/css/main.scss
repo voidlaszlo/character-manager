@@ -4,7 +4,7 @@ $color-primary : rgb(32, 28, 71);
 $color-secondary : rgb(122, 255, 166);
 
 // BREAKPOINTS
-$breakpoint-tablet : 1500px;
+$breakpoint-tablet : 1300px;
 
 body {
     margin:0; padding:0;
@@ -17,48 +17,19 @@ header {
     background-color: $color-primary;
     padding: 0.5em 15vw;
 
-    // FLEX
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     @media screen and (max-width: $breakpoint-tablet) {
         justify-content: center;
+        padding: 0;
     }
     
 
     h1 {
         margin: 0;
         color: $color-secondary;
+        padding: 1em;
 
         @media screen and (max-width: $breakpoint-tablet) {
-            display: none;
-        }
-    }
-
-    nav {
-
-        ul {
-            padding: 0;
-
-            li {
-                display: inline-block;
-
-                a, a:visited, a:link {
-                    padding: 0.25em 1em;
-                    margin-right: 1em;
-                    text-decoration: none;
-                    color: white;
-                    font-size: 1.4em;
-                    border: 1px solid $color-secondary;
-
-                    &:hover {
-                        color: $color-secondary;
-                        transition: 200ms ease-out;
-                    }
-
-                }
-            }
+            text-align: center;
         }
     }
 }
@@ -66,6 +37,10 @@ header {
 // MAIN
 main {
     padding: 2em 15vw;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        padding: 0;
+    }
 
     h1 {
         font-size: 3em;
@@ -84,6 +59,10 @@ div.manage {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    @media screen and (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+    }
+
     div.manage-left {
         padding: 1em;
 
@@ -97,6 +76,10 @@ div.manage {
             padding: 1em;
             background-color: black;
             color: white;
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                padding: 1em 0;
+            }
         }
     }
 
@@ -110,6 +93,11 @@ div.manage {
             border: 2px solid $color-secondary;
             color: white;
             font-size: 4em;
+            outline: none;
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                font-size: 2em;
+            }
             
             &:hover {
                 color: $color-secondary;
@@ -126,15 +114,27 @@ div#display {
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
 
+    @media screen and (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+    }
+
     div.character {
         display: flex;
         flex-direction: column;
 
         box-shadow: 0 3px 7px rgba(0, 0, 0, 0.7);
         border: 1px solid $color-primary;
-        padding: 0 1em;
+        padding: 1em 3em;
         flex: 50%;
         height: 500px;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            flex: 100%;
+            height: unset;
+            margin: 1em;
+            padding: 10px;
+            font-size: 0.8em;
+        }
 
         h2 {
             color: $color-secondary;
