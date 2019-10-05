@@ -14,6 +14,14 @@ class CharacterContainer {
     addCharacter(character) {
         this.characters.push(character)
     }
+
+    search(search_input_value) {
+        let searched_characters = []
+        for( let character of this.characters ) {
+            character.name.toLowerCase().startsWith(search_input_value.toLowerCase()) ? searched_characters.push(character) : null
+        }
+        return searched_characters
+    }
 }
 
 class CharacterInputManager {
@@ -59,11 +67,50 @@ class CharacterManager {
             this.render()
         })
 
+        document.getElementById('search_input').addEventListener('keyup', (e) => {
+            
+            if(e.target.value === "") {
+
+                this.render()
+
+            } else {
+
+                this.renderSearched(e.target.value)
+
+            }
+
+        })
+
+    }
+
+    renderSearched(searchvalue) {
+                        
+        let searched = this.characterContainer.search(searchvalue)
+        let display = document.getElementById('display')
+        display.innerHTML = ""
+
+        for(let character of searched) {
+
+            display.innerHTML += 
+            `<div class="character">
+    
+            <h2>${character.name}</h2>
+            <p>${character.description}</p>
+                
+            <div class="character-abilites">
+                <h2>Ability : </h2>
+                <p title="${character.ability.description}">${character.ability.name}</p>
+            </div>
+    
+            </div>
+            `
+
+        }
     }
 
     render() {
-        let display = document.getElementById('display')
 
+        let display = document.getElementById('display')
         display.innerHTML = ""
 
         for(let character of this.characterContainer.characters) {
